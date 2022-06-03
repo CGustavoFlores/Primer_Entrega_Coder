@@ -1,0 +1,36 @@
+{%  extends "menu.html"  %}
+
+{% load static %}
+
+{% block bloqueacompletar %}
+
+        <h1><p>Abm de Clientes</p></h1>
+
+        <form action="alta_clientes" method = 'POST'>
+                {% csrf_token %}
+
+                <label for="">Cuit:</label>
+                <input type="text" name="cuit" required>
+
+                <label for="">R.Social:</label>
+                <input type="text" name="rsocial" required>
+
+                <label for="">Domicilio: </label>
+                <input type="text" name = "domicilio" required>
+
+                <label for="">Mail:</label>
+                <input type="email" name="mail" id="" required>
+
+                <label for="">T.E:</label>
+                <input type="text" name="telefono" id="" required>
+
+                <label for="">Activo :</label>
+                <input type="text" name="activo">
+
+
+                <input type="submit" value="Grabar">
+                
+
+        </form>
+
+{% endblock %}

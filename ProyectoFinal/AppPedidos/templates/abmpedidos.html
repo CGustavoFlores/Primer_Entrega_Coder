@@ -1,0 +1,28 @@
+{%  extends "menu.html"  %}
+
+{% load static %}
+
+{% block bloqueacompletar %}
+
+        <h1><p>Abm de Pedidos</p></h1>
+
+        <form action="alta_pedido" method = 'POST'>
+                {% csrf_token %}
+
+                <label for="">Nro.Pedido :</label>
+                <input type="number" name="nropedido" required>
+
+                <label for="">Fecha :</label>
+                <input type="date" name="fecha" required>
+
+                <label for="">Cuit: </label>
+                <input type="text" name = "cuit" required>
+
+                <label for="">Importe: </label> :</label>
+                <input type="Importe" name="importe" id="" required>
+
+                <input type="submit" value="Grabar">
+
+        </form>
+
+{% endblock %}

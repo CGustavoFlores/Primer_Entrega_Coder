@@ -103,7 +103,7 @@ def buscar(request):
         nombre =request.GET['nombre']
         cursos = Articulos.objects.filter(Descripcion__icontains = nombre)
         print (cursos)
-        return render( request, "resultado_buscararticulo.html" , {"cursos", cursos})
+        return render( request, "resultado_buscararticulo.html" , {"cursos": cursos})
         #return HttpResponse (f"Estamos buscadno { request.GET['nombre']}")
     else:
         return HttpResponse ("campo de busqueda vacio")
